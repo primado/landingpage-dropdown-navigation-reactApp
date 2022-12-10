@@ -109,6 +109,7 @@ $dropdown_font: .8em;
     min-width: 120px;
     background-color: $almost_white;
     box-shadow: $nav_item_shadow;
+    transition: 3s ease-in-out;
 }
 
 .dropdown-content a {

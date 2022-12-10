@@ -84,6 +84,7 @@
   min-width: 120px;
   background-color: hsl(0deg, 0%, 98%);
   box-shadow: 9px 9px 69px -29px rgba(0, 0, 0, 0.75);
+  transition: 3s ease-in-out;
 }
 
 .dropdown-content a {
