@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** Colors **/
+#nav {
+  background-color: hsl(0deg, 0%, 98%);
+  font-size: "Epilogue", sans-serif;
+  padding: 2em;
+  border: 3px solid red;
+}
+
+.navbar-flex {
+  display: flex;
+  justify-content: baseline;
+  font-family: "Epilogue", sans-serif;
+}
+
+.nav-brand {
+  margin-right: 3em;
+  border: 1px solid blue;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items-lf {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid aqua;
+  font-family: "Epilogue", sans-serif;
+}
+
+.dropdown {
+  margin-right: 1.3em;
+  position: relative;
+  display: inline-block;
+  font-family: "Epilogue", sans-serif;
+}
+
+.dropbtn {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-items-lf .nav-link {
+  margin-right: 1.3em;
+  text-decoration: none;
+  padding: 0.99em 0.1em;
+}
+
+.nav-link, .dropbtn {
+  font-family: "Epilogue", sans-serif;
+  font-size: 1em;
+  color: hsl(0deg, 0%, 8%);
+  padding: 0.99em 0.1em;
+  border: 1px solid yellow;
+}
+
+.dropbtn img {
+  margin: 0 0.29em;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  min-width: 100px;
+  background-color: hsl(0deg, 0%, 98%);
+  box-shadow: 9px 9px 69px -29px rgba(0, 0, 0, 0.75);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5em 0.2em;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+}/*# sourceMappingURL=styles.css.map */
