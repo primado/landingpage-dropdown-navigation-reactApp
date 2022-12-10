@@ -40,7 +40,7 @@ export default function Navbar() {
                                 <div className="nav-items-lf">
                                    <div className="dropdown">
                                         <button onClick={ setToggle1 } className="dropbtn">Features
-                                            <img src={arrow_down} alt="arrow-down icom" />
+                                            <img src={arrow_down} alt="arrow-down icon" />
                                         </button>
                                         {toggle1 && (
                                             <Feature />

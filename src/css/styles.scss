@@ -16,38 +16,49 @@ $weight700: 700;
 $nav-item_font: 1em;
 $defualtFontFam: 'Epilogue', sans-serif;
 $pad_nav_item: .99em .1em;
+$dropdown_font: .8em;
 
 
 #nav {
     background-color: $almost_white;
     font-size: $defualtFontFam;
     padding: 2em;
-    border: 3px solid red;
+    // border: 3px solid red;
 
 }
 
 .navbar-flex {
     display: flex;
-    justify-content: baseline;
+    // justify-content: center;
+    // align-items: center;
     font-family: $defualtFontFam;
 }
 
 .nav-brand {
     margin-right: 3em;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    padding: .8em 0;
+}
+
+.nav-brand-link {
+    display: block;
 }
 
 
 .navbar-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-items-lf {
     display: flex;
     flex-direction: row;
-    border: 2px solid aqua;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid aqua;
     font-family: $defualtFontFam;
+    margin-right: 35em;
 
 }
 
@@ -57,6 +68,7 @@ $pad_nav_item: .99em .1em;
     display: inline-block;
     font-family: $defualtFontFam;
     
+    
 }
 
 .dropbtn {
@@ -64,7 +76,9 @@ $pad_nav_item: .99em .1em;
     border: none;
     background: none;
     cursor: pointer;
-    
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
 }
 
 .nav-items-lf .nav-link {
@@ -78,28 +92,48 @@ $pad_nav_item: .99em .1em;
     font-size: $nav-item_font;
     color: $almost_black;
     padding: $pad_nav_item;
-    border: 1px solid yellow;
+    // border: 1px solid yellow;
 }
 
 .dropbtn img {
     margin: 0 .29em;
+    height: .5em;
 }
 
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    min-width: 100px;
+    min-width: 120px;
     background-color: $almost_white;
     box-shadow: $nav_item_shadow;
 }
 
 .dropdown-content a {
     display: block;
-    padding: .5em .2em;
+    padding: 0em .2em;
+    margin-bottom: .9em;
+    // border: 1px solid red;
     text-decoration: none;
     font-family: $defualtFontFam;
+    font-size: $dropdown_font;
+
 }
 
+.nav-link img {
+    width: 1em;
+    margin: 0 .4em;
+}
+
+.navbar-items
+.nav-items-rt {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items-rt a {
+    margin-right: 1.5em;
+}
