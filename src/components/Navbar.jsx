@@ -42,6 +42,7 @@ export default function Navbar() {
                                         <button onClick={ setToggle1 } className="dropbtn">Features
                                             <img src={arrow_down} alt="arrow-down icon" />
                                         </button>
+
                                         {toggle1 && (
                                             <Feature />
                                         )}
@@ -61,7 +62,7 @@ export default function Navbar() {
                             </div>
         
                             <div className="nav-items-rt">
-                                <a href="#">Login</a>
+                                <a className="nav-login" href="#">Login</a>
                                 <a className="nav-link-regis" href="#">Register</a>
                             </div>
 
