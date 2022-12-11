@@ -17,12 +17,15 @@ $nav-item_font: 1em;
 $defualtFontFam: 'Epilogue', sans-serif;
 $pad_nav_item: .99em .1em;
 $dropdown_font: .8em;
+$nav_space_btw: 40em;
+$nav_font_size: 15px;
 
 
 #nav {
     background-color: $almost_white;
-    font-size: $defualtFontFam;
+    font-family: $defualtFontFam;
     padding: 2em;
+    color: $almost_black !important;
     // border: 3px solid red;
 
 }
@@ -32,6 +35,7 @@ $dropdown_font: .8em;
     // justify-content: center;
     // align-items: center;
     font-family: $defualtFontFam;
+    font-size: $nav_font_size;
 }
 
 .nav-brand {
@@ -58,7 +62,7 @@ $dropdown_font: .8em;
     align-items: center;
     // border: 2px solid aqua;
     font-family: $defualtFontFam;
-    margin-right: 35em;
+    margin-right: $nav_space_btw;
 
 }
 
@@ -137,4 +141,21 @@ $dropdown_font: .8em;
 
 .nav-items-rt a {
     margin-right: 1.5em;
+    font-family: $defualtFontFam;
+    font-size: $nav_font_size;
+    text-decoration: none;
+    color: $almost_black;
+    cursor: pointer;
+}
+
+.nav-items-rt .nav-link-regis {
+    padding: .9em .99em;
+}
+
+.nav-items-rt .nav-link-regis:hover {
+    border: 2px solid $almost_black;
+    border-radius: 1em;
+    cursor: pointer;
+    // padding: .9em .99em;
+
 }

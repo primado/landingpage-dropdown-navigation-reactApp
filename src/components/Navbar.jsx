@@ -62,7 +62,7 @@ export default function Navbar() {
         
                             <div className="nav-items-rt">
                                 <a href="#">Login</a>
-                                <a href="#">Register</a>
+                                <a className="nav-link-regis" href="#">Register</a>
                             </div>
 
                         </div>

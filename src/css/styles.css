@@ -7,13 +7,15 @@
 /** Colors **/
 #nav {
   background-color: hsl(0deg, 0%, 98%);
-  font-size: "Epilogue", sans-serif;
+  font-family: "Epilogue", sans-serif;
   padding: 2em;
+  color: hsl(0deg, 0%, 8%) !important;
 }
 
 .navbar-flex {
   display: flex;
   font-family: "Epilogue", sans-serif;
+  font-size: 15px;
 }
 
 .nav-brand {
@@ -37,7 +39,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Epilogue", sans-serif;
-  margin-right: 35em;
+  margin-right: 40em;
 }
 
 .dropdown {
@@ -109,4 +111,19 @@
 
 .nav-items-rt a {
   margin-right: 1.5em;
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 8%);
+  cursor: pointer;
+}
+
+.nav-items-rt .nav-link-regis {
+  padding: 0.9em 0.99em;
+}
+
+.nav-items-rt .nav-link-regis:hover {
+  border: 2px solid hsl(0deg, 0%, 8%);
+  border-radius: 1em;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
