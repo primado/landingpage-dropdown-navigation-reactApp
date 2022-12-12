@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import  React, { useState } from 'react';
+import ClickAwayListener from '@mui/base/ClickAwayListener';
 
 // Components
 import Feature from "./nav-features";
@@ -13,15 +14,23 @@ import "../css/styles.css";
 
 export default function Navbar() {
 
-    const useToggle = (initialState) => {
-        const [toggleValue, setToggleValue] = useState(initialState);
+    const [ open, setOpen ] = useState(false);
+    const [ open2, setOpen2 ] = useState(false)
+
+    const handleClick = () => {
+        setOpen((prev) => !prev);
+    }
+    const handleClick2 = () => {
+        setOpen2( (prev) => !prev);
+    }
+    const handleClickAway = () => {
+          setOpen(false);
+    }
+    const handleClickAway2 = () => {
+          setOpen2(false);
+    };
     
-        const toggler = () => { setToggleValue(!toggleValue) };
-        return [toggleValue, toggler]
-      };
-    
-      const [toggle1, setToggle1] = useToggle();
-      const[toggle2, setToggle2] = useToggle()
+
 
     return (
         <div>
@@ -38,24 +47,30 @@ export default function Navbar() {
                         <div className="navbar-items">
                             <div className="navbar-items">
                                 <div className="nav-items-lf">
+                                   <ClickAwayListener  onClickAway={handleClickAway}> 
+                                        <div className="dropdown">
+                                             <button onClick={ handleClick } className="dropbtn">
+                                                 Features
+                                                 <img src={arrow_down} alt="arrow-down icon" />
+                                             </button>
+
+                                             {open ? (
+                                                 <Feature  />
+                                             ) : null}
+                                        </div>
+                                   </ClickAwayListener>
+
+                                   <ClickAwayListener onClickAway={ handleClickAway2 }>
                                    <div className="dropdown">
-                                        <button onClick={ setToggle1 } className="dropbtn">Features
+                                        <button onClick={ handleClick2 } className="dropbtn">Company
                                             <img src={arrow_down} alt="arrow-down icon" />
                                         </button>
 
-                                        {toggle1 && (
-                                            <Feature />
-                                        )}
-                                   </div>
-                                   <div className="dropdown">
-                                        <button onClick={ setToggle2 } className="dropbtn">Company
-                                            <img src={arrow_down} alt="arrow-down icon" />
-                                        </button>
-
-                                        {  toggle2 && (   
+                                        {  open2 ? (   
                                             <Company />
-                                        )}
+                                        ) : null}
                                    </div>
+                                   </ClickAwayListener>
                                    <a className="nav-link" href="#">Careers</a>
                                    <a className="nav-link" href="#">About</a>
                                 </div>
