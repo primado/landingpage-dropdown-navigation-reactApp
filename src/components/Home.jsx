@@ -21,7 +21,8 @@ export default function Home() {
                             </h1>
                             <p className="hero--text">
                                 Get your team in sync, no matter your location. <br /> Streamline processes, 
-                                create team rituals, and <br /> watch productivity soar.
+                                create team rituals, and <br />
+                                 watch productivity soar.
                             </p>
 
                             <div className="hero-call-action">

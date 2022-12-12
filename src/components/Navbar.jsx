@@ -45,15 +45,17 @@ export default function Navbar() {
         <div>
             <header>
                 <nav id="nav">
-                    <div className="navbar-flex">
-                        <div className="nav-brand">
+                    <div className="nav-brand">
                             <a className="nav-brand-link" href="#">
                                 <img src={nav_brand} alt="brand logo" />
                             </a>
                         </div>
+                    <div className={ navOpen ? "navbar-flex active" : "navbar-flex" }>
+                        
 
 
-                        <div  className={ navOpen ? "navbar-items--flex active" : "navbar-items--flex" } >
+                        {/* <div className="navbar-items--flex"> */}
+                            {/* className={ navOpen ? "navbar-items--flex active" : "navbar-items--flex" } */}
                             {/* <div className="navbar-items"> */}
                                 <div className="nav-items-lf">
                                    <ClickAwayListener  onClickAway={handleClickAway}> 
@@ -91,23 +93,25 @@ export default function Navbar() {
                                    <a className="nav-link" href="#">About</a>
                                 </div>
                             {/* </div> */}
-        
-                            <div className="nav-items-rt">
-                                <a className="nav-login" href="#">Login</a>
-                                <a className="nav-link-regis" href="#">Register</a>
-                            </div>
 
+                        {/* </div> */}
+
+                        <div className="nav-items-rt">
+                            <a className="nav-login" href="#">Login</a>
+                            <a className="nav-link-regis" href="#">Register</a>
                         </div>
-
-                        <ClickAwayListener onClickAway={ handleNavClickAway }> 
-                            <button onClick={ handleNavClick } className='menuIcon' type='button'>
-                                { navOpen ? 
-                                <img src={close_menu} alt="Menu icon" />
-                                :  <img src={menu} alt="Menu icon" />
-                                }         
-                            </button>
-                        </ClickAwayListener>
                     </div>
+
+                    
+
+                    {/* `<ClickAwayListener onClickAway={ handleNavClickAway }>  */}
+                        <button onClick={ handleNavClick } className='menuIcon' type='button'>
+                            { navOpen ? 
+                            <img src={close_menu} alt="Menu icon" />
+                            :  <img src={menu} alt="Menu icon" />
+                            }         
+                        </button>
+                    {/* </ClickAwayListener> */}
                    
                 </nav>
             </header>

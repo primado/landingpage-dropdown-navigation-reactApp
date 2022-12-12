@@ -11,11 +11,14 @@
   padding: 2em;
   color: hsl(0deg, 0%, 8%) !important;
   font-weight: 500 !important;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: "Epilogue", sans-serif;
   font-size: 15px;
 }
@@ -29,20 +32,10 @@
   display: block;
 }
 
-.navbar-items--flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 37em;
-}
-
 .nav-items-lf {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   font-family: "Epilogue", sans-serif;
-  margin-right: 37em;
 }
 
 .dropdown {
@@ -115,10 +108,10 @@
   margin: 0 0.6em;
 }
 
-.navbar-items--flex .nav-items-rt {
+.nav-items-rt {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-items-rt a {
@@ -152,15 +145,21 @@
   border: none;
   background: none;
   z-index: 2;
-  display: block;
+  display: none;
 }
 
 /*** Navber Media Quesries  ***/
-@media only screen and (max-width: 769px) {
-  #nav {
-    background-color: blue;
+@media only screen and (max-width: 1106px) {
+  .navbar-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 0em !important;
   }
-  .navbar-items--flex {
+}
+@media only screen and (max-width: 769px) {
+  .navbar-flex {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -172,9 +171,9 @@
     height: 100vh;
     background-color: hsl(0deg, 0%, 98%);
     padding: 7em 2em;
-    margin-right: 0 !important;
+    box-shadow: 9px 9px 69px -29px rgba(0, 0, 0, 0.75);
   }
-  .navbar-items--flex.active {
+  .navbar-flex.active {
     right: 0px !important;
   }
   .nav-items-lf {
@@ -182,6 +181,9 @@
     flex-direction: column;
     justify-content: flex-start !important;
     align-items: flex-start !important;
+  }
+  .menuIcon {
+    display: block;
   }
   .nav-items-rt {
     display: flex;
