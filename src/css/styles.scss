@@ -17,7 +17,7 @@ $nav-item_font: 1em;
 $defualtFontFam: 'Epilogue', sans-serif;
 $pad_nav_item: .99em .1em;
 $dropdown_font: 1em;
-$nav_space_btw: 35em;
+$nav_space_btw: 37em;
 $nav_font_size: 15px;
 
 
@@ -50,10 +50,12 @@ $nav_font_size: 15px;
 }
 
 
-.navbar-items {
+.navbar-items--flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    // border: 2px solid red;
+    margin-right: $nav_space_btw;
 }
 
 .nav-items-lf {
@@ -142,11 +144,11 @@ $nav_font_size: 15px;
     margin: 0 .6em;
 }
 
-.navbar-items
+.navbar-items--flex
 .nav-items-rt {
-    display: center;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .nav-items-rt a {

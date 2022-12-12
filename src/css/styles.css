@@ -28,10 +28,11 @@
   display: block;
 }
 
-.navbar-items {
+.navbar-items--flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 37em;
 }
 
 .nav-items-lf {
@@ -40,7 +41,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Epilogue", sans-serif;
-  margin-right: 35em;
+  margin-right: 37em;
 }
 
 .dropdown {
@@ -113,10 +114,10 @@
   margin: 0 0.6em;
 }
 
-.navbar-items .nav-items-rt {
-  display: center;
-  justify-content: center;
-  align-items: center;
+.navbar-items--flex .nav-items-rt {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .nav-items-rt a {
