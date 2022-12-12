@@ -51,7 +51,11 @@ export default function Navbar() {
                                         <div className="dropdown">
                                              <button onClick={ handleClick } className="dropbtn">
                                                  Features
-                                                 <img src={arrow_down} alt="arrow-down icon" />
+
+                                                {open ?
+                                                 <img src={arrow_up} alt="arrow-down icon" />
+                                                 : <img src={arrow_down} alt="arrow-down icon" />
+                                                }
                                              </button>
 
                                              {open ? (
@@ -63,7 +67,10 @@ export default function Navbar() {
                                    <ClickAwayListener onClickAway={ handleClickAway2 }>
                                    <div className="dropdown">
                                         <button onClick={ handleClick2 } className="dropbtn">Company
-                                            <img src={arrow_down} alt="arrow-down icon" />
+                                        {open2 ?
+                                            <img src={arrow_up} alt="arrow-down icon" />
+                                             : <img src={arrow_down} alt="arrow-down icon" />
+                                        }
                                         </button>
 
                                         {  open2 ? (   
