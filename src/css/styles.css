@@ -15,6 +15,7 @@
 
 .navbar-flex {
   display: flex;
+  justify-content: space-between;
   font-family: "Epilogue", sans-serif;
   font-size: 15px;
 }
@@ -146,6 +147,57 @@
   cursor: pointer;
 }
 
+.menuIcon {
+  outline: none;
+  border: none;
+  background: none;
+  z-index: 2;
+  display: block;
+}
+
+/*** Navber Media Quesries  ***/
+@media only screen and (max-width: 769px) {
+  #nav {
+    background-color: blue;
+  }
+  .navbar-items--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: -1em;
+    right: -560px !important;
+    width: 300px;
+    height: 100vh;
+    background-color: hsl(0deg, 0%, 98%);
+    padding: 7em 2em;
+    margin-right: 0 !important;
+  }
+  .navbar-items--flex.active {
+    right: 0px !important;
+  }
+  .nav-items-lf {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .nav-items-rt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 2em 2em;
+  }
+  .nav-items-rt .nav-login {
+    padding: 0.8em 0.8em;
+    margin-bottom: 1.33em;
+  }
+  .nav-items-rt .nav-link-regis {
+    padding: 0.9em 3.89em;
+  }
+}
 /*** Home section **/
 #home {
   background-color: hsl(0deg, 0%, 98%);

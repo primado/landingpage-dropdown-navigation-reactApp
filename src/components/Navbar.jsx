@@ -9,6 +9,8 @@ import Company from "./nav-company";
 import nav_brand from "../assets/logo.svg"
 import arrow_down from "../assets/icon-arrow-down.svg"
 import arrow_up from "../assets/icon-arrow-up.svg"
+import close_menu from "../assets/icon-close-menu.svg"
+import menu from "../assets/icon-menu.svg"
 // Styles
 import "../css/styles.css";
 
@@ -16,6 +18,7 @@ export default function Navbar() {
 
     const [ open, setOpen ] = useState(false);
     const [ open2, setOpen2 ] = useState(false)
+    const [ navOpen, setNavOpen ] = useState(false)
 
     const handleClick = () => {
         setOpen((prev) => !prev);
@@ -30,6 +33,12 @@ export default function Navbar() {
           setOpen2(false);
     };
     
+    const handleNavClick = () => {
+        setNavOpen( (close) => !close )
+    }
+    const handleNavClickAway = () => {
+        setNavOpen(false)
+    }
 
 
     return (
@@ -44,7 +53,7 @@ export default function Navbar() {
                         </div>
 
 
-                        <div className="navbar-items--flex">
+                        <div  className={ navOpen ? "navbar-items--flex active" : "navbar-items--flex" } >
                             {/* <div className="navbar-items"> */}
                                 <div className="nav-items-lf">
                                    <ClickAwayListener  onClickAway={handleClickAway}> 
@@ -89,6 +98,15 @@ export default function Navbar() {
                             </div>
 
                         </div>
+
+                        <ClickAwayListener onClickAway={ handleNavClickAway }> 
+                            <button onClick={ handleNavClick } className='menuIcon' type='button'>
+                                { navOpen ? 
+                                <img src={close_menu} alt="Menu icon" />
+                                :  <img src={menu} alt="Menu icon" />
+                                }         
+                            </button>
+                        </ClickAwayListener>
                     </div>
                    
                 </nav>

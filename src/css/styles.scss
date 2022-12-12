@@ -33,7 +33,7 @@ $nav_font_size: 15px;
 
 .navbar-flex {
     display: flex;
-    // justify-content: center;
+    justify-content: space-between;
     // align-items: center;
     font-family: $defualtFontFam;
     font-size: $nav_font_size;
@@ -177,6 +177,77 @@ $nav_font_size: 15px;
     border-radius: 1em;
     cursor: pointer;
     // padding: .9em .99em;
+
+}
+
+.menuIcon {
+    outline: none;
+    border: none;
+    background: none;
+    z-index: 2;
+    display: block;
+}
+
+
+/*** Navber Media Quesries  ***/
+
+@media only screen and (max-width:769px) {
+    
+    #nav {
+        background-color: blue;
+        
+    }
+
+    .navbar-items--flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: -1em;
+        right: -560px !important;
+        // left: 0 !important;
+        width: 300px;
+        height: 100vh;
+        background-color: $almost_white;
+        padding: 7em 2em;
+        margin-right: 0 !important;
+        
+    }
+
+    .navbar-items--flex.active {
+        right: 0px !important;
+    }
+
+    .nav-items-lf {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        // border: 2px solid red;
+
+
+    }
+
+    .nav-items-rt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 2em 2em;
+        // border: 2px solid red;
+    }
+
+    .nav-items-rt .nav-login {
+        padding: .8em .8em;
+        margin-bottom: 1.33em;
+        // border: 2px solid red;
+
+    }
+
+    .nav-items-rt .nav-link-regis {
+        padding: .9em 3.89em;
+    }
 
 }
 
