@@ -6,6 +6,7 @@ import audiophile from "../assets/client-audiophile.svg"
 import meet from "../assets/client-meet.svg"
 import maker from "../assets/client-maker.svg"
 import hero_image from "../assets/image-hero-desktop.png"
+import hero_img_mobile from "../assets/image-hero-mobile.png"
 
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
                     <div className="container">
                         <div className="hero--container">
                             <h1>Make 
-                                <div>remote work</div>
+                                <div className="h1-breaker">remote work</div>
                             </h1>
                             <p className="hero--text">
                                 Get your team in sync, no matter your location. <br /> Streamline processes, 
@@ -39,7 +40,12 @@ export default function Home() {
                         </div>
 
                         <div className="hero-image">
-                            <img src={hero_image} alt="Hero image" />
+                            {/* <img src={hero_image} alt="Hero image" /> */}
+                            <picture>
+                                <source media="(min-width: 900px)" srcset={hero_image} />
+                                <source media="(min-width: 480px)" srcset={ hero_img_mobile } />
+                                <img src={ hero_image } alt="Hero image desktop" />
+                            </picture>
                         </div>
 
                     </div>

@@ -8,7 +8,7 @@
 #nav {
   background-color: hsl(0deg, 0%, 98%);
   font-family: "Epilogue", sans-serif;
-  padding: 2em;
+  padding: 2em 3em;
   color: hsl(0deg, 0%, 8%) !important;
   font-weight: 500 !important;
   display: flex;
@@ -59,7 +59,7 @@
 .nav-items-lf .nav-link {
   margin-right: 1.3em;
   text-decoration: none;
-  padding: 0.99em 0.1em;
+  padding: 0.99em 1.2em;
   font-weight: 500;
 }
 
@@ -73,7 +73,7 @@
   font-family: "Epilogue", sans-serif;
   font-size: 1em;
   color: hsl(0deg, 0%, 8%);
-  padding: 0.99em 0.1em;
+  padding: 0.99em 1.2em;
 }
 
 .dropbtn img {
@@ -267,4 +267,114 @@
 
 .hero-image img {
   width: 24.99em;
+}
+
+/**** Home Media Queries @769px ****/
+@media only screen and (max-width: 769px) {
+  #home .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .hero--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
+  .hero--container h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+  }
+  .hero--container h1 .h1-breaker {
+    display: inline;
+    flex-direction: row;
+    margin-left: 0.22em;
+  }
+  .hero--container .hero--text {
+    color: hsl(0deg, 0%, 41%);
+    font-size: 1.39em;
+    line-height: 1.39em;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+  .hero-call-action a {
+    background-color: hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 98%);
+    padding: 0.9em 1.49em;
+    border-radius: 0.6em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.49em;
+  }
+  .hero-call-action a:hover {
+    background: none !important;
+    cursor: pointer;
+    color: hsl(0deg, 0%, 8%);
+    border-radius: 0.6em;
+    border: 2px solid hsl(0deg, 0%, 8%);
+    transition: background 3ms ease-in-out;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .hero-image img {
+    width: 20.22em;
+  }
+  #home .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .hero--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 2em;
+  }
+  .hero--container h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  .hero--container h1 .h1-breaker {
+    display: inline;
+    flex-direction: row;
+    margin-left: 0.22em;
+  }
+  .hero--container .hero--text {
+    color: hsl(0deg, 0%, 41%);
+    font-size: 0.98em;
+    line-height: 1.39em;
+    text-align: center;
+    margin-top: 1.3em;
+  }
+  .hero-call-action a {
+    background-color: hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 98%);
+    padding: 0.9em 1.2em;
+    border-radius: 0.6em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.35em;
+  }
+  .hero-call-action a:hover {
+    background: none;
+    cursor: pointer;
+    color: hsl(0deg, 0%, 8%);
+    border-radius: 0.6em;
+    border: 2px solid hsl(0deg, 0%, 8%);
+    transition: background 3ms ease-in-out;
+  }
+  .client-icons {
+    display: flex;
+    margin-top: 4em;
+  }
+  .client-icons img {
+    width: 4em;
+    margin-right: 0.5em;
+    height: 1.5em;
+  }
 }/*# sourceMappingURL=styles.css.map */

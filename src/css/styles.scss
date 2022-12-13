@@ -15,7 +15,7 @@ $weight500: 500;
 $weight700: 700;
 $nav-item_font: 1em;
 $defualtFontFam: 'Epilogue', sans-serif;
-$pad_nav_item: .99em .1em;
+$pad_nav_item: .99em 1.2em;
 $dropdown_font: 1em;
 $nav_space_btw: 37em;
 $nav_space_btw2: 20em;
@@ -25,7 +25,7 @@ $nav_font_size: 15px;
 #nav {
     background-color: $almost_white;
     font-family: $defualtFontFam;
-    padding: 2em;
+    padding: 2em 3em;
     color: $almost_black !important;
     font-weight: $weight500 !important;
     display: flex;
@@ -310,9 +310,7 @@ $nav_font_size: 15px;
 #home .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
-    
+    justify-content: space-around;  
     
 }
 
@@ -375,5 +373,151 @@ $nav_font_size: 15px;
 
 .hero-image img {
     width: 24.99em;
+}
+
+
+
+/**** Home Media Queries @769px ****/
+
+@media only screen and (max-width:769px) {
+
+    #home .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;  
+        align-items: center;
+        
+    }
+
+    .hero--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // border: 2px solid red;
+        margin-top: 2em;
+    
+    }
+
+    .hero--container h1 {
+        font-size: 3.2em;
+        font-weight: $weight700;
+        
+    }
+
+    .hero--container h1
+    .h1-breaker {
+        display: inline;
+        flex-direction: row;
+        margin-left: .22em;
+    }
+
+    .hero--container .hero--text {
+        color: $medium_grey;
+        font-size: 1.39em;
+        line-height: 1.39em;
+        text-align: center;
+        margin-top: 1.5em;
+    
+    }
+
+    .hero-call-action a {
+        background-color: $almost_black;
+        color: $almost_white;
+        padding: .9em 1.49em;
+        border-radius: .6em;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.49em;
+    }
+
+    .hero-call-action a:hover {
+        background: none !important;
+        cursor: pointer;
+        color: $almost_black;
+        border-radius: .6em;
+        border: 2px solid $almost_black;
+        transition: background 3ms ease-in-out;
+    }
+    
+}
+
+@media only screen and (max-width:412px) {
+
+    .hero-image img {
+        width: 20.22em;
+    }
+
+    #home .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;  
+        align-items: center;
+        
+    }
+
+    .hero--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        // border: 2px solid red;
+        margin-top: 2em;
+    
+    }
+
+    .hero--container h1 {
+        font-size: 2.5em;
+        font-weight: $weight700;
+        
+    }
+
+
+    .hero--container h1
+    .h1-breaker {
+        display: inline;
+        flex-direction: row;
+        margin-left: .22em;
+    }
+
+    .hero--container .hero--text {
+        color: $medium_grey;
+        font-size: .98em;
+        line-height: 1.39em;
+        text-align: center;
+        margin-top: 1.3em;
+    
+    }
+
+    .hero-call-action a {
+        background-color: $almost_black;
+        color: $almost_white;
+        padding: .9em 1.2em;
+        border-radius: .6em;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.35em;
+    }
+
+    .hero-call-action a:hover {
+        background: none;
+        cursor: pointer;
+        color: $almost_black;
+        border-radius: .6em;
+        border: 2px solid $almost_black;
+        transition: background 3ms ease-in-out;
+    }
+
+
+    .client-icons {
+        display: flex ;
+        margin-top: 4em;
+        
+    }
+    .client-icons img {
+        width: 4em;
+        margin-right: .5em;
+        height: 1.5em;
+    }
 }
 
