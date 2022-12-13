@@ -243,6 +243,7 @@
   border-radius: 0.6em;
   text-decoration: none;
   cursor: pointer;
+  font-family: 500 !important;
 }
 
 .hero-call-action a:hover {
@@ -303,24 +304,30 @@
   .hero-call-action a {
     background-color: hsl(0deg, 0%, 8%);
     color: hsl(0deg, 0%, 98%);
-    padding: 0.9em 1.49em;
+    padding: 0.9em 1.23em !important;
     border-radius: 0.6em;
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.49em;
+    font-size: 1em;
   }
   .hero-call-action a:hover {
     background: none !important;
     cursor: pointer;
     color: hsl(0deg, 0%, 8%);
-    border-radius: 0.6em;
+    border-radius: 1em;
     border: 2px solid hsl(0deg, 0%, 8%);
     transition: background 3ms ease-in-out;
+  }
+  .client-icons {
+    margin-bottom: 3em;
   }
 }
 @media only screen and (max-width: 412px) {
   .hero-image img {
-    width: 20.22em;
+    width: 22.22em;
+  }
+  #home {
+    padding-bottom: 3em;
   }
   #home .container {
     display: flex;
@@ -333,7 +340,7 @@
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    margin-top: 2em;
+    margin-top: 3.5em;
   }
   .hero--container h1 {
     font-size: 2.5em;
@@ -351,30 +358,81 @@
     text-align: center;
     margin-top: 1.3em;
   }
+  .hero-call-action {
+    margin-bottom: 2.1em;
+  }
   .hero-call-action a {
     background-color: hsl(0deg, 0%, 8%);
     color: hsl(0deg, 0%, 98%);
-    padding: 0.9em 1.2em;
-    border-radius: 0.6em;
+    padding: 0.9em 1.23em !important;
+    border-radius: 1em;
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.35em;
+    font-size: 1em;
   }
   .hero-call-action a:hover {
     background: none;
     cursor: pointer;
     color: hsl(0deg, 0%, 8%);
-    border-radius: 0.6em;
+    border-radius: 1em;
     border: 2px solid hsl(0deg, 0%, 8%);
     transition: background 3ms ease-in-out;
   }
   .client-icons {
     display: flex;
-    margin-top: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
   }
   .client-icons img {
     width: 4em;
     margin-right: 0.5em;
     height: 1.5em;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .hero--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 3.5em;
+  }
+  .hero--container h1 {
+    font-size: 1.89em;
+    font-weight: 700;
+  }
+  .hero-call-action a {
+    background-color: hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 98%);
+    padding: 0.9em 1.23em !important;
+    border-radius: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  .hero-call-action a:hover {
+    border-radius: 1em;
+  }
+  .hero--container .hero--text {
+    color: hsl(0deg, 0%, 41%);
+    font-size: 0.89em;
+    line-height: 1.35em;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .hero-image img {
+    width: 19.99em;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .hero-image img {
+    width: 19.69em;
+  }
+  .hero--container h1 {
+    font-size: 2em;
+  }
+  .hero--container .hero--text {
+    font-size: 0.89em;
+    line-height: 1.4em;
   }
 }/*# sourceMappingURL=styles.css.map */
