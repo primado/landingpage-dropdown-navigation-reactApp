@@ -13,9 +13,9 @@ $nav_item_shadow: 9px 9px 69px -29px rgba(0,0,0,0.75);
 //* Font **/
 $weight500: 500;
 $weight700: 700;
-$nav-item_font: 1em;
+$nav-item_font: .89em;
 $defualtFontFam: 'Epilogue', sans-serif;
-$pad_nav_item: .99em 1.2em;
+$pad_nav_item: .99em .5em;
 $dropdown_font: 1em;
 $nav_space_btw: 37em;
 $nav_space_btw2: 20em;
@@ -69,7 +69,6 @@ $nav_font_size: 15px;
     // align-items: center;
     // border: 2px solid aqua;
     font-family: $defualtFontFam;
-    // margin-right: $nav_space_btw;
 
 }
 
@@ -112,11 +111,13 @@ $nav_font_size: 15px;
     color: $almost_black;
     padding: $pad_nav_item;
     // border: 1px solid yellow;
+    font-weight: $weight500;
 }
 
 .dropbtn img {
     margin: 0 .29em;
     height: .5em;
+    transition: 0.5ms ease-in-out;
 }
 
 .dropdown-content {
@@ -591,7 +592,7 @@ $nav_font_size: 15px;
 @media only screen and (max-width:375px) {
 
     .hero-image img {
-        width: 19.69em;
+        width: 19.69em !important;
     }
 
     .hero--container h1 {
@@ -604,13 +605,17 @@ $nav_font_size: 15px;
         line-height: 1.4em;
     }
 
+    .client-icons img {
+        width: 3.5em !important;
+    }
+
 }
 
 
 @media only screen and (max-width:428px) {
 
     .hero--container h1 {
-        font-size: 2.12em;
+        font-size: 2.12em !important;
     }
 
     .hero--container
@@ -620,7 +625,11 @@ $nav_font_size: 15px;
     }
 
     .hero-image img {
-        width: 21.9em;
+        width: 21.9em !important;
+    }
+
+    .client-icons img {
+        width: 4.5em;
     }
 
 }
@@ -641,5 +650,60 @@ $nav_font_size: 15px;
 
     .client-icons img {
         width: 4.89em;
+    }
+}
+
+
+@media only screen and (max-width:810px) {
+
+
+    #home {
+        padding-bottom: 5em !important;
+    }
+
+    #home .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .hero--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3.5em;
+    }
+
+    .hero--container h1 {
+        font-size: 3em;
+    }
+
+    .hero--container h1 .h1-breaker {
+        display: inline;
+        margin-left: .3em;
+    }
+
+    .hero-image img {
+        width: 30.55em;
+    }
+
+    .hero--container .hero--text {
+        text-align: center;
+    }
+
+    .hero-call-action {
+        margin-top: 3.5em;
+    }
+
+    .hero-call-action a:hover {
+        background: none !important;
+        cursor: pointer;
+        color: $almost_black;
+        border-radius: .6em;
+        border: 2px solid $almost_black;
+        transition: background 3ms ease-in-out;
     }
 }

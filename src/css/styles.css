@@ -59,7 +59,7 @@
 .nav-items-lf .nav-link {
   margin-right: 1.3em;
   text-decoration: none;
-  padding: 0.99em 1.2em;
+  padding: 0.99em 0.5em;
   font-weight: 500;
 }
 
@@ -71,14 +71,16 @@
 
 .nav-link, .dropbtn {
   font-family: "Epilogue", sans-serif;
-  font-size: 1em;
+  font-size: 0.89em;
   color: hsl(0deg, 0%, 8%);
-  padding: 0.99em 1.2em;
+  padding: 0.99em 0.5em;
+  font-weight: 500;
 }
 
 .dropbtn img {
   margin: 0 0.29em;
   height: 0.5em;
+  transition: 0.5ms ease-in-out;
 }
 
 .dropdown-content {
@@ -426,7 +428,7 @@
 }
 @media only screen and (max-width: 375px) {
   .hero-image img {
-    width: 19.69em;
+    width: 19.69em !important;
   }
   .hero--container h1 {
     font-size: 2em;
@@ -435,17 +437,23 @@
     font-size: 0.89em !important;
     line-height: 1.4em;
   }
+  .client-icons img {
+    width: 3.5em !important;
+  }
 }
 @media only screen and (max-width: 428px) {
   .hero--container h1 {
-    font-size: 2.12em;
+    font-size: 2.12em !important;
   }
   .hero--container .hero--text {
     font-size: 0.99em;
     line-height: 1.56em;
   }
   .hero-image img {
-    width: 21.9em;
+    width: 21.9em !important;
+  }
+  .client-icons img {
+    width: 4.5em;
   }
 }
 @media only screen and (max-width: 390px) {
@@ -457,5 +465,47 @@
 @media only screen and (max-width: 414px) {
   .client-icons img {
     width: 4.89em;
+  }
+}
+@media only screen and (max-width: 810px) {
+  #home {
+    padding-bottom: 5em !important;
+  }
+  #home .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5em;
+  }
+  .hero--container h1 {
+    font-size: 3em;
+  }
+  .hero--container h1 .h1-breaker {
+    display: inline;
+    margin-left: 0.3em;
+  }
+  .hero-image img {
+    width: 30.55em;
+  }
+  .hero--container .hero--text {
+    text-align: center;
+  }
+  .hero-call-action {
+    margin-top: 3.5em;
+  }
+  .hero-call-action a:hover {
+    background: none !important;
+    cursor: pointer;
+    color: hsl(0deg, 0%, 8%);
+    border-radius: 0.6em;
+    border: 2px solid hsl(0deg, 0%, 8%);
+    transition: background 3ms ease-in-out;
   }
 }/*# sourceMappingURL=styles.css.map */
