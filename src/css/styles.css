@@ -447,4 +447,15 @@
   .hero-image img {
     width: 21.9em;
   }
+}
+@media only screen and (max-width: 390px) {
+  .hero--container .hero--text {
+    font-size: 0.89em;
+    line-height: 1.56em;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .client-icons img {
+    width: 4.89em;
+  }
 }/*# sourceMappingURL=styles.css.map */
