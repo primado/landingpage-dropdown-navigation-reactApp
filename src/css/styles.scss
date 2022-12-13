@@ -600,7 +600,7 @@ $nav_font_size: 15px;
 
     .hero--container
     .hero--text {
-        font-size: .89em;
+        font-size: .89em !important;
         line-height: 1.4em;
     }
 
@@ -609,7 +609,19 @@ $nav_font_size: 15px;
 
 @media only screen and (max-width:428px) {
 
-    
+    .hero--container h1 {
+        font-size: 2.12em;
+    }
+
+    .hero--container
+    .hero--text {
+        font-size: .99em;
+        line-height: 1.56em;
+    }
+
+    .hero-image img {
+        width: 21.9em;
+    }
 
 }
 

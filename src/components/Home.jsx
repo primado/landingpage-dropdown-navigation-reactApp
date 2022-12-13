@@ -46,6 +46,7 @@ export default function Home() {
                                 <source media="(max-width: 480px)" srcset={ hero_img_mobile } />
                                 <source media="(min-width: 412px)" srcset={ hero_img_mobile } />
                                 <source media="(max-width: 360px)" srcset={ hero_img_mobile } />
+                                <source media="(max-width: 375px)" srcset={ hero_img_mobile } />
                                 <img src={ hero_image } alt="Hero image desktop" />
                             </picture>
                         </div>
