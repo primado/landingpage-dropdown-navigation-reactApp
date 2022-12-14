@@ -54,9 +54,7 @@ export default function Navbar() {
                         
 
 
-                        {/* <div className="navbar-items--flex"> */}
-                            {/* className={ navOpen ? "navbar-items--flex active" : "navbar-items--flex" } */}
-                            {/* <div className="navbar-items"> */}
+        
                                 <div className="nav-items-lf">
                                    <ClickAwayListener  onClickAway={handleClickAway}> 
                                         <div className="dropdown">
@@ -92,9 +90,6 @@ export default function Navbar() {
                                    <a className="nav-link" href="#">Careers</a>
                                    <a className="nav-link" href="#">About</a>
                                 </div>
-                            {/* </div> */}
-
-                        {/* </div> */}
 
                         <div className="nav-items-rt">
                             <a className="nav-login" href="#">Login</a>
