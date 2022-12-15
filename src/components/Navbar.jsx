@@ -1,6 +1,9 @@
 import  React, { useState } from 'react';
 import ClickAwayListener from '@mui/base/ClickAwayListener';
 
+
+
+
 // Components
 import Feature from "./nav-features";
 import Company from "./nav-company";
@@ -51,45 +54,39 @@ export default function Navbar() {
                             </a>
                         </div>
                     <div className={ navOpen ? "navbar-flex active" : "navbar-flex" }>
-                        
-
-
         
-                                <div className="nav-items-lf">
-                                   <ClickAwayListener  onClickAway={handleClickAway}> 
-                                        <div className="dropdown">
-                                             <button onClick={ handleClick } className="dropbtn">
-                                                 Features
-
-                                                {open ?
-                                                 <img src={arrow_up} alt="arrow-down icon" />
-                                                 : <img src={arrow_down} alt="arrow-down icon" />
-                                                }
-                                             </button>
-
-                                             {open ? (
-                                                 <Feature  />
-                                             ) : null}
-                                        </div>
-                                   </ClickAwayListener>
-
-                                   <ClickAwayListener onClickAway={ handleClickAway2 }>
-                                   <div className="dropdown">
-                                        <button onClick={ handleClick2 } className="dropbtn">Company
-                                        {open2 ?
-                                            <img src={arrow_up} alt="arrow-down icon" />
-                                             : <img src={arrow_down} alt="arrow-down icon" />
+                        <div className="nav-items-lf">
+                           <ClickAwayListener  onClickAway={handleClickAway}> 
+                                <div className="dropdown">
+                                     <button onClick={ handleClick } className="dropbtn">
+                                         Features
+                                        {open ?
+                                         <img src={arrow_up} alt="arrow-down icon" />
+                                         : <img src={arrow_down} alt="arrow-down icon" />
                                         }
-                                        </button>
-
-                                        {  open2 ? (   
-                                            <Company />
-                                        ) : null}
-                                   </div>
-                                   </ClickAwayListener>
-                                   <a className="nav-link" href="#">Careers</a>
-                                   <a className="nav-link" href="#">About</a>
+                                     </button>
+                                     {open ? (
+                                         <Feature  />
+                                     ) : null}
                                 </div>
+                           </ClickAwayListener>
+                           <ClickAwayListener onClickAway={ handleClickAway2 }>
+                           <div className="dropdown">
+                                <button onClick={ handleClick2 } className="dropbtn">Company
+                                {open2 ?
+                                    <img  src={arrow_up} alt="arrow-down icon" />
+                                     : <img src={arrow_down} alt="arrow-down icon" />
+                                }
+                                </button>
+                                {  open2 ? (   
+                                    <Company />
+                                ) : null}
+                           </div>
+                           </ClickAwayListener>
+
+                           <a className="nav-link" href="#">Careers</a>
+                           <a className="nav-link" href="#">About</a>
+                        </div>
 
                         <div className="nav-items-rt">
                             <a className="nav-login" href="#">Login</a>
